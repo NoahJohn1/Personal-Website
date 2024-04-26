@@ -1,0 +1,15 @@
+runtime: php83
+
+runtime_config:
+  document_root: public/index.php
+
+
+# App Engine automatically redirects all requests to the HTTPS protocol.
+# For instance, http://example.com/ would be redirected to https://example.com/.
+# For more information, see https://cloud.google.com/appengine/docs/flexible/php/runtime#https_and_http2
+handlers:
+  - url: /.*
+    script: auto
+
+entrypoint:
+  serve handler.php
