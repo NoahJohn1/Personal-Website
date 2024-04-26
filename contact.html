@@ -1,0 +1,93 @@
+<!--
+Author: Noah Jackson
+Course: Web Programming
+Assignment:HTML Project
+File purpose: Creates contact page  
+-->
+
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <link rel="stylesheet" href="global.css">
+        <title>Contact Page</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <nav id = navBar></nav>
+
+        <h1>Contact</h1>
+
+        <h2>
+            Want to get in touch?<br>
+        </h2>
+        <hr>
+
+        <form 
+            name = "contact" 
+            action = "https://phpnj-421522.ue.r.appspot.com/formHandler" 
+            onsubmit = "return validateForm()"
+            method = "post"> 
+
+            <!--Text Boxes-->
+            <label for="fname">First name:</label>
+            <input type="text" id="fname"  name="fname" placeholder="John" size="15">
+
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Doe" size="15"><br><br><br>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" placeholder="example123@example.com" size="20" style="width:350px"><br><br><br>
+
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" placeholder="1234567890" size="15"><br><br><br>
+
+            <!--Radio buttons-->
+            <label>Are you a hiring recruiter?</label><br><br>
+            <label for="yes">
+                <input type="radio" id="yes"  name="radio" value="Yes"> 
+                <span>Yes</span>
+            </label><br><br>
+            
+            <label for="no">
+                <input type="radio" id="no" name="radio" value="No">
+                <span>No</span>
+            </label><br><br><br>
+
+            <!--Checkboxes-->
+            <label>Where did you hear about me?</label><br><br>
+            <label for="resume">
+                <input type="checkbox" id="resume" name="resume" value="Yes">
+                <span>Resume</span>
+            </label><br><br>
+
+            <label for="LinkedIn">
+                <input type="checkbox" id="LinkedIn" name="LinkedIn" value="Yes">
+                <span>LinkedIn</span>
+            </label><br><br>
+
+            <label for="GitHub">
+                <input type="checkbox" id="GitHub" name="GitHub" value="Yes">
+                <span>GitHub</span>
+            </label><br><br><br>
+
+            <!--Select menu-->
+            <label for="select">How would you describe your experience of this site?</label><br><br>
+
+            <select id="select" name="rating">
+                <option value=" ">Choose</option>
+                <option value="Excellent">Excellent</option>
+                <option value="Satisfactory">Satisfactory</option>
+                <option value="Needs Work">Needs Work</option>
+            </select><br><br><br>
+
+            <!--Hidden parameter-->
+            
+            <input type="hidden" id="hiddenEx" name="hidden" value="Example">
+
+            <!--Submit Button-->
+            <input type="submit" value="Submit">
+        </form>
+        <script src="index.js"></script>
+    </body>
+</html>

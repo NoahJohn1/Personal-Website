@@ -1,0 +1,294 @@
+/*-----------------Body & text type entities--------------*/
+body {
+  background-color: #000000;
+}
+
+h1 {
+  color:rgba(240, 248, 255, 0.767);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 200%;
+  font-weight: 700;
+  text-align: left;
+  padding-left: 10%;
+  padding-top: 5%;
+  padding-bottom: 0;
+}
+
+h2 {
+  color:aliceblue;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 300%;
+  font-weight: 900;
+  text-align: left;
+  padding-left: 10%;
+  padding-top: 0;
+}
+
+h3 {
+  color:aliceblue;
+  font-family: sans-serif;
+  font-size: 250%;
+  font-weight: 500;
+  text-align: left;
+  padding-left: 10%;
+  padding-top: 0;
+  margin-bottom: 0;
+}
+
+p {
+  color:aliceblue;
+  font-family: sans-serif;
+  font-size: 175%;
+  font-weight: 125%;
+  text-align: left;
+  padding-left: 10%;
+  padding-top: 0;
+}
+
+hr{
+  height:3px;
+  border-width:0;
+  background-color:aquamarine;
+  width: 80%;
+  margin-left: 10%;
+}
+
+/*-------------------Table Styling--------------*/
+table {
+  border-collapse: collapse;
+  margin-left: 21%;;
+  width:50%;
+}
+
+th, td {
+  border: 5px solid rgb(71, 71, 71);
+  border-radius: 10%;
+  color:rgb(0, 0, 0);
+  font-size:125%;
+  font-weight: 125%;
+  font-family: sans-serif;
+  text-align: center;
+  padding: 12px 15px;
+}
+
+th {
+  background-color: aquamarine;
+}
+
+td{
+  background-color: rgb(255, 255, 255);
+}
+
+/*-----------------Nav Bar styling---------------*/
+.navClass {
+  list-style-type: none;
+  margin: 0;
+  padding-top: 1%;
+  padding-right: 5%;
+  overflow: hidden;
+  background-color: #000000;
+  border-radius: 10px;
+}
+
+/*styles NOAH on left*/
+#name {
+  float: left;
+  color:aliceblue;
+  font-family: sans-serif;
+  font-size: 200%;
+  font-weight: 900;
+  text-align: center;
+  padding: 16px;
+}
+  
+.navClass li a {
+  float: right;
+  margin-right: 50px;
+  display: block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 120%;
+  font-weight: 750;
+  padding: 16px;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+.navClass li a:hover {
+  box-shadow: 0 4px 0 0  aquamarine;
+  border-radius: 10px;
+  background-color: #181717;
+}
+
+/*----------------Regular List content----------------*/
+
+.content {
+  color:aliceblue;
+  padding-left: 12%;
+  color: rgb(255, 255, 255);
+  text-align: left;
+  font-size: 175%;
+  font-weight: 125%;
+  font-family: sans-serif;
+}
+
+.numbered li {
+  color:aliceblue;
+  font-family: sans-serif;
+  font-size: 175%;
+  font-weight: 125%;
+  text-align: left;
+  padding-left: 0%;
+}
+
+.content li::marker {
+  color: aquamarine;
+}
+
+/*----------------Form Styling----------------*/
+
+label {
+  color:aliceblue;
+  font-family: sans-serif;
+  font-size: 175%;
+  font-weight: 125%;
+  text-align: left;
+  padding-left: 10%;
+  padding-top: 0;
+}
+
+input {
+  cursor: pointer;
+}
+
+input[type=text] {
+  color:aquamarine;
+  background-color: #000000;
+  border: none;
+  outline: none;
+  border-bottom: .1em solid rgb(68, 68, 68);
+  transition: border-color 0.2s;
+  font-family: sans-serif;
+  font-size: 175%;
+  font-weight: 500;
+  text-align: left;
+  width: 200px;
+}
+
+input[type=text]:focus  {
+  border-bottom: .1em solid aquamarine;
+}
+
+input[type=hidden] {
+  color:aquamarine;
+  background-color: #000000;
+  border: none;
+  outline: none;
+  border-bottom: .1em solid rgb(68, 68, 68);
+  transition: border-color 0.2s;
+  font-family: sans-serif;
+  font-size: 175%;
+  font-weight: 500;
+  text-align: left;
+  width: 200px;
+}
+
+input[type=hidden]:focus  {
+  border-bottom: .1em solid aquamarine;
+}
+
+input[type=text]::placeholder {
+  font-size: 90%;
+  font-weight: 20;
+}
+
+input[type=radio] {
+  appearance: none;
+  background-color: #000000;
+  margin: 0;
+  font: inherit;
+  color: aquamarine;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 50%;
+  display: inline-grid;
+  place-content: center;
+  &::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em aquamarine;
+    background-color: CanvasText;
+    transform-origin: top bottom;
+  }
+  &:checked::before {
+    transform: scale(1);
+  }
+}
+
+input[type=submit] {
+  border: .2em solid aquamarine;
+  background: hsl(0 0 0/0);
+  padding: .85em 1.5em;
+  margin-left: 10%;
+  color: aquamarine;
+  font-family: sans-serif;
+  font-size: 100%;
+  font-weight: 200;
+  border-radius: 2em;
+  transition: .25s;
+  &:hover, &:focus, &:active {
+    background: aquamarine;
+    color: #000000;
+  }
+}
+
+input[type=checkbox] {
+  appearance: none;
+  background-color: #000000;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid aquamarine;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  display: inline-grid;
+  place-content: center;
+  &::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em aquamarine;
+    background-color: CanvasText;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    transform-origin: left top;
+  }
+  &:checked::before {
+    transform: scale(1);
+  }
+}
+
+select{
+  cursor: pointer;
+  color:aliceblue;
+  background-color:#000000;
+  border-color: aquamarine;
+  border-width: 3px;
+  border-radius: .25em;
+  font-family: sans-serif;
+  font-size: 125%;
+  font-weight: 500;
+  text-align: left;
+  margin-left:10%;
+  outline: 0;
+  width: 15rem;
+  padding: 1rem 4rem 1rem 1rem;
+}
